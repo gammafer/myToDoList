@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+.todoObject{
+    border: 2px solid black;
+    width: 23%;
+    height: 31%;
+    margin:10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.toDoData{
+    padding:0;
+    list-style: none;
+    text-align: center;
+}
+.subData{
+    font-family:'Comfortaa';
+}
+.doneBtn{
+    margin: 10px;
+    align-self:flex-end;
+}
+.tTitle{
+    font-family: 'Bebas Neue';
+}
