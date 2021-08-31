@@ -68,6 +68,21 @@ main{
     color:white;
     user-select: none;
 }
+.popupWindow{
+    z-index: 15;
+    border: 1px solid blue;
+    background-color: white;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 50vw;
+}
+.popupWindow input{
+    margin:10px;
+    width:50%;
+    border: 1px solid black;
+}
 
 .otherInfo{
     display: flex;

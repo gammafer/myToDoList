@@ -10,6 +10,8 @@ const toDoObject=(title, description, dueDate, priority)=>{
 
     const deleteToDo=document.createElement('button');
         deleteToDo.innerHTML='X';
+        deleteToDo.id='deleteToDo';
+        deleteToDo.addEventListener('click',function(e){deleteToDoEvent(e)});
         //deleteToDo.classList.add('deleteToDo');
         
 
@@ -30,5 +32,9 @@ const toDoObject=(title, description, dueDate, priority)=>{
 
     return toDoObject;
 }
-
-export default toDoObject;
+const deleteToDoEvent=(e)=>{
+    let target=e.target;
+    let parent=e.target.parentNode;
+    parent.remove();
+}
+export {toDoObject,deleteToDoEvent};
