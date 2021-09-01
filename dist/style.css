@@ -68,6 +68,7 @@ main{
     color:white;
     user-select: none;
 }
+
 .popupWindow{
     z-index: 15;
     border: 1px solid blue;
@@ -77,11 +78,27 @@ main{
     top:50%;
     transform: translateX(-50%) translateY(-50%);
     width: 50vw;
+    height: 80vh;
+    text-align: end;
+}
+
+.formDiv{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    height: 80%;
+    width: 100%;
+}
+
+.formDiv form{
+    width: 100%;
+    text-align: center;
 }
 .popupWindow input{
     margin:10px;
     width:50%;
     border: 1px solid black;
+    
 }
 
 .otherInfo{
