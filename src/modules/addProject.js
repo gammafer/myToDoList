@@ -24,6 +24,7 @@ const projectIIFE=(()=>{
     closeBtn.classList.add('closePopup');
     closeBtn.classList.add('closePP');
     closeBtn.innerHTML="X";
+    closeBtn.addEventListener('click',projectPopup);
     popup.appendChild(closeBtn);
 
     const projectFormDiv=document.createElement('div');
