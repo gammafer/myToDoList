@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 .todoObject{
     border: 2px solid black;
-    width: 20%;
-    height: 31%;
+    width: 30%;
+    height: 47%;
     margin:10px;
     display: flex;
     flex-direction: column;
@@ -11,9 +11,20 @@
 }
 
 .toDoData{
-    padding:0;
     list-style: none;
     text-align: center;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+
+}
+
+li{
+    margin: 15px;
+}
+
+.toDoData h1{
+    margin: 0;
 }
 .subData{
     font-family:'Comfortaa';

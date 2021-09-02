@@ -1,18 +1,18 @@
 import {toDoObject,deleteToDoEvent} from "./modules/toDoObject";
 import eListener from "./modules/addBtn";
+import projectIIFE from "./modules/addProject";
 
 const mainToDoScreen=document.getElementById('mainToDoScreen');
 const addBtn=document.getElementById('addBtn');
-for (let i=0;i<10;i++){
-    mainToDoScreen.insertBefore(toDoObject('test','test desc',new Date().toString(),'1'),addBtn);
-}
 
 const getToDoData=(form)=>{
     //sends data to toDoObject.js
     console.log(form);
-    const newToDO=toDoObject(form.title,form.description,form.date,form.priority);
+    const newToDO=toDoObject(form.title,form.date,form.priority,form.description,form.project);
     mainToDoScreen.insertBefore(newToDO,addBtn);
 }
+
+mainToDoScreen.appendChild(projectIIFE.popup);
 
 export default getToDoData;
 

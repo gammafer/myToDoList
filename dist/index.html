@@ -11,10 +11,12 @@
     <nav>
 
         <div class="logoText">MyToDo</div>
-
-        <select name="project" class="project" id="project">
-            <option value="default" id="default">Default</option>
-        </select>
+        <div class="projectDiv" id="projectDiv">
+            <button class="addProject" id="addProject">+</button>
+            <select name="project" class="project" id="project">
+                <option value="default" id="default">Default</option>
+            </select>
+        </div>
 
     </nav>
 
@@ -27,10 +29,10 @@
             <div class="formDiv">
             <form id='popupForm'>
                 <input type="text" name="title" id="p_title"><br>
-                <input type="text" name="description" id="p_desc"><br>
                 <input type="date" name="date" id="p_date"><br>
                 <input type="text" name="priority" id="p_priority"><br>
-                <button id="sendForm">Send</button>
+                <input type="text" name="description" class="description" id="p_desc"><br>
+                <button class="sendForm" id="sendForm">Send</button>
             </form>
         </div>
         </div>

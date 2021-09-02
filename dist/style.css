@@ -16,9 +16,16 @@ nav{
     justify-content: space-between;
     
 }
-
+.projectDiv{
+    display: inline-block;
+}
 .project{
     height: 50%;
+    margin:10px;
+}
+
+.addProject{
+    padding: 10px;
 }
 
 .logoText{
@@ -27,6 +34,11 @@ nav{
     color:white;
     margin-left: 30px;
     user-select: none;
+}
+
+.projectName::after{
+    content: "\a";
+    white-space: pre;
 }
 
 main{
@@ -82,6 +94,10 @@ main{
     text-align: end;
 }
 
+.closePopup{
+    margin: 10px;
+}
+
 .formDiv{
     display:flex;
     justify-content: center;
@@ -95,10 +111,23 @@ main{
     text-align: center;
 }
 .popupWindow input{
-    margin:10px;
+    margin:20px;
+    padding:10px;
     width:50%;
-    border: 1px solid black;
+    border: 1px solid grey;
     
+}
+
+.description{
+    height:3rem;
+}
+
+.popupWindow input:hover{
+    border: 1px solid black;
+}
+
+.sendForm{
+    width: 20%;
 }
 
 .otherInfo{
