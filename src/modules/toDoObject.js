@@ -40,4 +40,5 @@ const deleteToDoEvent=(e)=>{
   , 1000);
     parent.remove();
 }
+
 export {toDoObject,deleteToDoEvent};

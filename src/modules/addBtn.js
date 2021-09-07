@@ -6,6 +6,7 @@ link.href='./media/modules/addBtn.css';
 
 
 document.getElementsByTagName('HEAD')[0].appendChild(link);
+const select=document.getElementById('project');
 
 const popupWindow=()=>{
     eListener.popup.hidden=false;
@@ -19,7 +20,8 @@ const addToDo=(e)=>{
     //sends data to index.js
     const formData = new FormData(e.target.parentNode);
     const formProps = Object.fromEntries(formData);
-    getToDoData(formProps);
+    const selectText=select.options[select.selectedIndex].text;
+    getToDoData(formProps,selectText);
     eListener.form.reset();
     closePopup();
 }

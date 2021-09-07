@@ -31,6 +31,9 @@ const projectIIFE=(()=>{
     projectFormDiv.classList.add('formDiv');
     const projectForm=document.createElement('form');
     
+    const label=document.createElement('label');
+    label.innerHTML='Project name:';
+
     const nameInput=document.createElement('input');
     nameInput.classList.add('projectName');
     nameInput.id="projectName";
@@ -40,6 +43,7 @@ const projectIIFE=(()=>{
     sendBtn.innerHTML="Add project";
     sendBtn.addEventListener('click',(e)=>{addOption(e)});
 
+    projectForm.appendChild(label);
     projectForm.appendChild(nameInput);
     projectForm.appendChild(sendBtn);
 
