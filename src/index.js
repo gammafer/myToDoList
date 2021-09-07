@@ -1,6 +1,7 @@
 import {toDoObject,deleteToDoEvent} from "./modules/toDoObject";
 import eListener from "./modules/addBtn";
 import projectIIFE from "./modules/addProject";
+import addTodayElement from "./modules/today";
 
 const mainToDoScreen=document.getElementById('mainToDoScreen');
 const addBtn=document.getElementById('addBtn');
@@ -34,6 +35,10 @@ const getToDoData=(form,project)=>{
     console.log(form);
     const newToDO=toDoObject(form.title,form.date,form.priority,form.description,form.project);
     mainToDoScreen.insertBefore(newToDO,addBtn);
+    console.log(new Date(form.date).getDate(),new Date().getDate());
+    if(new Date(form.date).getDate()==new Date().getDate()){
+        addTodayElement(form);        
+    }
     const newObject={
         todo:form,
         project:`${project}`
