@@ -7,10 +7,17 @@ const addBtn=document.getElementById('addBtn');
 const navProject=document.getElementById('project');
 var toDoArray=[];
 const populateWindow=()=>{
+    let storageItem=localStorage.getItem('allTodo');
+    let storageArray=JSON.parse(storageItem);
     
+    if (toDoArray.length!=0){
+        for(let i=0;i<mainToDoScreen.children.length-2;i++){
+            mainToDoScreen.children[i].remove();
+        }
+        
+    }
+
     if (localStorage.getItem('allTodo') !== null){
-        let storageItem=localStorage.getItem('allTodo');
-        let storageArray=JSON.parse(storageItem);
         let selectText=navProject.options[navProject.selectedIndex].text;
         for(let i=0;i<storageArray.length;i++){
             if(storageArray[i].project===selectText){
@@ -18,6 +25,7 @@ const populateWindow=()=>{
             }
         }
     }
+
     
 }
 
