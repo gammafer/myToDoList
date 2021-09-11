@@ -1,7 +1,7 @@
 import {toDoObject,deleteToDoEvent} from "./modules/toDoObject";
 import eListener from "./modules/addBtn";
 import projectIIFE from "./modules/addProject";
-import addTodayElement from "./modules/today";
+import {todayIIFE,addTodayElement} from "./modules/today";
 
 const mainToDoScreen=document.getElementById('mainToDoScreen');
 const addBtn=document.getElementById('addBtn');

@@ -1,3 +1,5 @@
+let projectArray=['default'];
+
 const addOption=(e)=>{
     e.preventDefault();
     //Add new option by the buttons sibling element
@@ -5,6 +7,8 @@ const addOption=(e)=>{
     newOption.text=`${e.target.previousSibling.value}`;
     projectIIFE.projectDropdown.add(newOption);
     projectIIFE.projectForm.reset();
+    projectArray.push(newOption.text);
+    localStorage.setItem('projects',JSON.stringify(projectArray));
     projectPopup();
 }
 const projectPopup=()=>{
@@ -52,8 +56,17 @@ const projectIIFE=(()=>{
     
     const addProject=document.getElementById('addProject');
     addProject.addEventListener('click',projectPopup);
-
-
+    console.log(localStorage.getItem('projects') !== null);
+    if(localStorage.getItem('projects') !== null){
+        console.log
+        let projectItem=localStorage.getItem('projects');
+        let projectArray=JSON.parse(projectItem);
+        for(let i=1;i<projectArray.length;i++){
+            let newOption=document.createElement('option');
+            newOption.text=projectArray[i];
+            projectDropdown.add(newOption);
+        }
+    }
     return {projectDropdown,popup,projectForm};
 })();
 

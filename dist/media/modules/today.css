@@ -1,0 +1,9 @@
+.today{
+    overflow-y: scroll;
+}
+.todayItem{
+    border: 1px solid black;
+    text-align: center;
+}
+.todayItem p{
+    font-size: 2rem;
